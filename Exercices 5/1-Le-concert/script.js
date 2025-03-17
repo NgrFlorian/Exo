@@ -35,7 +35,7 @@ const concertRoom = [
     A. L'abonnement de Paul a expiré, vous devez l'exclure du concert.
 */
 
-concertRoom.pop("paul")
+concertRoom.pop()
 
 console.log(concertRoom)
 
@@ -44,7 +44,7 @@ console.log(concertRoom)
     B. Afin de mieux analyser votre base de données, triez les objets du tableau par rapport à leur âge dans l'ordre croissant.
 */
 *
-concertRoom.sort((a, b) => a.age - b.age)
+concertRoom.sort((a,b) => a.age - b.age)
 console.log(concertRoom);
 
 /* 
@@ -62,6 +62,10 @@ console.log(concertRoom);
     }
 */
 
+concertRoom.splice(0,2,{name: "Thomas",age: 19},{name: "Clara",age: 21})
+
+
+console.log(concertRoom);
 
 
 
@@ -69,4 +73,17 @@ console.log(concertRoom);
     D. Le concert va commencer d'ici deux heures, envoyez dans la console un rappel à tous les participants sous cette forme : "Salut [name], le concert commencera d'ici deux heures !"
 */
 
-concertRoom.forEach((el) => console.log(`Salut ${el.name}, le concert commencera d'ici deux heures !`))
+concertRoom.forEach((index) => console.log(`Salut ${index.name}, le concert commencera d'ici deux heures !`))
+
+
+
+
+
+
+
+
+
+
+
+
+// concertRoom.forEach((el) => console.log(`Salut ${el.name}, le concert commencera d'ici deux heures !`))
