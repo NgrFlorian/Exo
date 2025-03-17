@@ -41,6 +41,16 @@ const dam = {
   }
   
 
+yableau = Object.keys(dam)
+console.log(yableau);
+
+
+let tablau = []
+for (const key in dam) {
+    tablau.push (key)
+}
+console.log(tablau);
+    
 
 
 
@@ -48,7 +58,18 @@ const dam = {
 
 
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const prop1 = Object.keys(dam)
 // console.log(prop1);
