@@ -38,13 +38,12 @@ const concertRoom = [
 concertRoom.pop("paul")
 
 console.log(concertRoom)
-console.log()
 
 
 /* 
     B. Afin de mieux analyser votre base de données, triez les objets du tableau par rapport à leur âge dans l'ordre croissant.
 */
-
+*
 concertRoom.sort((a, b) => a.age - b.age)
 console.log(concertRoom);
 
@@ -63,15 +62,6 @@ console.log(concertRoom);
     }
 */
 
-concertRoom.splice(0, 2, {
-    name: "Thomas",
-    age: 19
-},
-{
-    name: "Clara",
-    age: 21
-}
-)
 
 
 
