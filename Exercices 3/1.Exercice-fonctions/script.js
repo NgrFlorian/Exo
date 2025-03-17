@@ -10,15 +10,23 @@
 */
 
 
-
-dividedBy10 = (a) => a / 10
-console.log(dividedBy10(100));
-
+dividedBy10 = (num) => num * 10
+console.log(dividedBy10(5));
 
 function dividedBy2(a){
   return a / 2
 }
 console.log(dividedBy2(100));
+
+
+// dividedBy10 = (a) => a / 10
+// console.log(dividedBy10(100));
+
+
+// function dividedBy2(a){
+//   return a / 2
+// }
+// console.log(dividedBy2(100));
 
 
 
@@ -32,11 +40,20 @@ console.log(dividedBy2(100));
     Formule celsius - fahrenheit  :  (celsius * 1.8) + 32
 */
 
+
 const weather = {
-  getFahrenheit: (celsius) => (celsius * 1.8) + 32
+  getFahrenheit(celsius){return(celsius * 1.8) + 32}
 }
 
-console.log(weather.getFahrenheit(30));
+console.log(weather.getFahrenheit(100));
+
+
+
+// const weather = {
+//   getFahrenheit: (celsius) => (celsius * 1.8) + 32
+// }
+
+// console.log(weather.getFahrenheit(30));
 
 
 
@@ -72,15 +89,75 @@ const travelers = [
 },
 ]
 
-function areFromNationality(arr, callback){
-  for (const value of arr) {
-    if (!callback(value)){
-      return false
-    }
-  }
-  return true
+
+
+function areFromNationality(arr, nationality) {
+  return arr.every(arr2 => arr2.nationality === nationality);
 }
+
+console.log(areFromNationality(travelers, "FR")); // false
+console.log(areFromNationality(travelers, "EN")); // false
+console.log(areFromNationality([{ name: "Alice", nationality: "EN" }], "EN")); // true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function areFromNationality(nation){
+//     let result
+//      if (!travelers.nationality === nation){
+//      result = false
+//      console.log(result);
+//      }
+//      else {
+//       result = true
+//     }
+//     return result
+// }
+
+// console.log(areFromNationality("FR"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function areFromNationality(arr, callback){
+//   for (const value of arr) {
+//     if (!callback(value)){
+//       return false
+//     }
+//   }
+//   return true
+// }
  
-console.log(areFromNationality(travelers, travelers => travelers.nationality === "FR"));
-console.log(areFromNationality(travelers, travelers => travelers.nationality === "EN"));
-console.log(areFromNationality(travelers, travelers => travelers.nationality === "IT"));
+// console.log(areFromNationality(travelers, travelers => travelers.nationality === "FR"));
+// console.log(areFromNationality(travelers, travelers => travelers.nationality === "EN"));
+// console.log(areFromNationality(travelers, travelers => travelers.nationality === "IT"));

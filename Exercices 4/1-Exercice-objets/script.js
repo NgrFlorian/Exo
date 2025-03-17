@@ -6,13 +6,23 @@
     Créez également les propriétés theme(thème du restaurant(Japonais, Italien, Libanais, ...)) et name avec les valeurs que vous souhaitez.
 */
 
-const restaurant = {
-    waiter: () => console.log("Que désirez-vous ?"),
-    theme: "japonais",
-    name: "yoko"
-}
 
-restaurant.waiter()
+const restaurant = {
+    waiter: waiter => console.log("Que désirez-vous ?"),
+    theme: "jap",
+    nameuh: "yoko"
+}
+console.log(restaurant.waiter());
+
+
+
+// const restaurant = {
+//     waiter: () => console.log("Que désirez-vous ?"),
+//     theme: "japonais",
+//     name: "yoko"
+// }
+
+// restaurant.waiter()
 
 
 /* 
@@ -31,14 +41,23 @@ const dam = {
   }
   
 
-const prop1 = Object.keys(dam)
-console.log(prop1);
 
-const prop2 = []
-for (const prop in dam) { 
-    prop2.push(prop)
-}
-console.log(prop1);
+
+
+
+
+
+
+  
+
+// const prop1 = Object.keys(dam)
+// console.log(prop1);
+
+// const prop2 = []
+// for (const prop in dam) { 
+//     prop2.push(prop)
+// }
+// console.log(prop1);
 
   
     
